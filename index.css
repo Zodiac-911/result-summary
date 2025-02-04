@@ -153,7 +153,16 @@ body {
 button {
   width: 100%;
   height: 56px;
-  background-color: hsl(224, 30%, 27%);
+  background: linear-gradient(
+    to bottom,
+    hsla(256, 72%, 46%, 1),
+    hsl(241, 81%, 54%),
+    hsl(224, 30%, 27%),
+    hsl(224, 30%, 27%),
+    hsl(224, 30%, 27%)
+  );
+  background-size: 100% 250%;
+  background-position: 0 100%;
   border: none;
   color: white;
   font-size: 18px;
@@ -162,12 +171,8 @@ button {
   cursor: pointer;
 }
 button:hover {
-  background: linear-gradient(
-    to bottom,
-    hsla(256, 72%, 46%, 1),
-    hsl(241, 81%, 54%)
-  );
-  transition: background 0.3s;
+  background-position: 0 0;
+  transition: all 0.3s;
 }
 @media screen and (max-width: 500px) {
   .container {
